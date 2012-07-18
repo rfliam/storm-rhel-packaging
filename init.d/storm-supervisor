@@ -33,7 +33,7 @@ start() {
     else
 	echo "Starting storm supervisor..."
     fi 
-    STORM_CMD="java -$JVM_TYPE -Xmx$SUPERVISOR_JVM_MEMORY -Dstorm.home=\"$STORM_HOME\"-Dlogfile.name=supervisor.log $NIMBUS_JVM_OPTS -cp \"$CLASSPATH\" backtype.storm.daemon.nimbus &"
+    STORM_CMD="java -$JVM_TYPE -Xmx$SUPERVISOR_JVM_MEMORY -Dstorm.home=\"$STORM_HOME\"-Dlogfile.name=supervisor.log $SUPERVISOR_JVM_OPTS -cp \"$CLASSPATH\" backtype.storm.daemon.supervisor &"
     daemon "$STORM_CMD > /dev/null && echo \$! > $PID_FILE"
     RETVAL=$?
     print_storm_status $PID_FILE
