@@ -1,0 +1,17 @@
+# This file contains default configurations for storm startup
+JVM_TYPE="server"
+
+# Nimbus configuration options
+NIMBUS_JVM_MEMORY="2048m"
+# Additional nimbus JVM options
+NIMBUS_JVM_OPTS="-Dlog4j.configuration=storm.log.properties"
+
+# Worker configuration options
+WORKER_JVM_MEMORY="2048m"
+# Additional nimbus JVM options
+WORKER_JVM_OPTS="-Dlog4j.configuration=storm.log.properties"
+
+# UI configuration options
+UI_JVM_MEMORY="2048m"
+# Additional nimbus JVM options
+UI_JVM_OPTS="-Dlog4j.configuration=storm.log.properties"
